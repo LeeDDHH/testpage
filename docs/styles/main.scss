@@ -1,0 +1,91 @@
+$head-color: #478e46;
+$head-r-color: #e4d72e;
+$btn-opaticy: 0.8;
+
+@mixin header-btn($color, $b-color){
+    color:$color;
+    background-color:$b-color;
+    opacity:$btn-opaticy;
+        &:hover {
+            opacity:1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+p{
+    margin-top:45px;
+}
+
+header{
+    background-color:$head-color;
+    width:100%;
+    height:60px;
+    position: fixed;
+}
+
+header{
+    .left-logo{
+        float:left;
+        padding:0 0 0 30px;
+        font-size:42px;
+
+        .piyo{
+            display:none;
+            font-size: 20px;
+            float: right;
+            padding: 0 0 0 6px;
+        }
+
+        @include header-btn($head-r-color,null);
+        &:hover{
+            .piyo{
+                display:block;
+            }
+            opacity:1;
+        }
+    }
+
+    .right-menu{
+        padding:12px 30px 0 0;
+        float:right;
+        display:flex;
+        flex-direction:row;
+
+        .menu-item{
+            border-radius: 10px;
+            margin: 0 0 0 22px;
+            padding: 4px 21px;
+            @include header-btn($head-color,$head-r-color);
+        }
+    }
+
+}
+
+.top{
+    margin:0 auto;
+
+    .top-img{
+        padding:500px 0 500px 0;
+        background:url('../img/hope2.jpg');
+        background-size:cover;
+    }
+    
+}
+
+.container{
+    color:white;
+    .content{
+        margin:0 auto;
+        padding: 0 0 0 50px;
+    }
+}

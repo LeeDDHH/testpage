@@ -1,4 +1,87 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
- @media (min-width: 1000px){}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 45px;
+}
+
+header {
+  background-color: #478e46;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+}
+
+header .left-logo {
+  float: left;
+  padding: 0 0 0 30px;
+  font-size: 42px;
+  color: #e4d72e;
+  opacity: 0.8;
+}
+
+header .left-logo .piyo {
+  display: none;
+  font-size: 20px;
+  float: right;
+  padding: 0 0 0 6px;
+}
+
+header .left-logo:hover {
+  opacity: 1;
+}
+
+header .left-logo:hover {
+  opacity: 1;
+}
+
+header .left-logo:hover .piyo {
+  display: block;
+}
+
+header .right-menu {
+  padding: 12px 30px 0 0;
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+
+header .right-menu .menu-item {
+  border-radius: 10px;
+  margin: 0 0 0 22px;
+  padding: 4px 21px;
+  color: #478e46;
+  background-color: #e4d72e;
+  opacity: 0.8;
+}
+
+header .right-menu .menu-item:hover {
+  opacity: 1;
+}
+
+.top {
+  margin: 0 auto;
+}
+
+.top .top-img {
+  padding: 500px 0 500px 0;
+  background: url("../img/hope2.jpg");
+  background-size: cover;
+}
+
+.container {
+  color: white;
+}
+
+.container .content {
+  margin: 0 auto;
+  padding: 0 0 0 50px;
+}
