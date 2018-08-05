@@ -33,6 +33,10 @@ header{
     position: fixed;
 }
 
+a{
+    text-decoration: none;
+}
+
 header{
     .left-logo{
         float:left;
@@ -69,6 +73,18 @@ header{
         }
     }
 
+}
+
+@each $type in top, about, skills, contact, list{
+    .#{$type}{
+        margin: 0 auto;
+
+        .#{$type}-img{
+            padding:500px 0 500px 0;
+            background:url('../img/#{$type}.jpg');
+            background-size:cover;  
+        }
+    }
 }
 
 .top{

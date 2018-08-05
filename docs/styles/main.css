@@ -20,6 +20,10 @@ header {
   position: fixed;
 }
 
+a {
+  text-decoration: none;
+}
+
 header .left-logo {
   float: left;
   padding: 0 0 0 30px;
@@ -73,8 +77,52 @@ header .right-menu .menu-item:hover {
 
 .top .top-img {
   padding: 500px 0 500px 0;
-  background: url("../img/hope2.jpg");
+  background: url("../img/top.jpg");
   background-size: cover;
+}
+
+.about {
+  margin: 0 auto;
+}
+
+.about .about-img {
+  padding: 500px 0 500px 0;
+  background: url("../img/about.jpg");
+  background-size: cover;
+}
+
+.skills {
+  margin: 0 auto;
+}
+
+.skills .skills-img {
+  padding: 500px 0 500px 0;
+  background: url("../img/skills.jpg");
+  background-size: cover;
+}
+
+.contact {
+  margin: 0 auto;
+}
+
+.contact .contact-img {
+  padding: 500px 0 500px 0;
+  background: url("../img/contact.jpg");
+  background-size: cover;
+}
+
+.list {
+  margin: 0 auto;
+}
+
+.list .list-img {
+  padding: 500px 0 500px 0;
+  background: url("../img/list.jpg");
+  background-size: cover;
+}
+
+.top {
+  margin: 0 auto;
 }
 
 .container {
