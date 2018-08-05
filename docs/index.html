@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./styles/main.css">
+        <script src="./scripts/main.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
         <header>
@@ -52,6 +53,18 @@
                     <div class="content">
                         <h3>まずは会って話してみませんか？</h3>
                         <h3>お気軽に連絡ください</h3>
+
+                        <div class="form-like">
+                            <p>お名前 <input type="text" id="name" class="text-input" name="name" placeholder="山田太郎" size="50"><br></p>
+                            メール <input type="email" id="email" class="text-input" name="email" placeholder="tarou_yamada@gmail.com" size="50"><br>
+
+                            <p>
+                            お聞きしたい内容<br>
+                            <textarea rows="5" cols="30" id="inquiry" class="textarea-input" name="inquiry" placeholder="やりたいことを選ぶ基準がわかりません。"></textarea><br>
+                            </p>
+                            <button id="send" class="send">送ってみる</button>
+                        </div>
+
                     </div>
                 </div>
             </div>

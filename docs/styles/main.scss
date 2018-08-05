@@ -87,21 +87,47 @@ header{
     }
 }
 
-.top{
-    margin:0 auto;
-
-    .top-img{
-        padding:500px 0 500px 0;
-        background:url('../img/hope2.jpg');
-        background-size:cover;
-    }
-    
-}
-
 .container{
     color:white;
     .content{
         margin:0 auto;
         padding: 0 0 0 50px;
     }
+}
+
+.form-like{
+    background-color: antiquewhite;
+    border: solid 4px #ffd69e;
+    width: 400px;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 27px 0 0 0;
+    color: dimgrey;
+    text-align: center;
+
+    p{
+        margin:8px 0 8px 0;
+    }
+        .text-input{
+            height: 21px;
+            border: none;
+            background-color: #ffe7b1;
+        }
+
+        .textarea-input{
+            height: 90px;
+            width: 360px;
+            border: none;
+            background-color: #ffe7b1;
+        }
+
+        .send{
+            background-color: #478e46;
+            color: #e4d72e;
+            border: none;
+            width: 95%;
+            height: 40px;
+            border-radius: 6px;
+            font-size: 20px;
+        }
 }
