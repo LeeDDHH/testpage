@@ -5,7 +5,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./styles/main.css">
         <script src="./scripts/main.js" type="text/javascript" charset="utf-8"></script>
-        <script type="module" src="./scripts/typing.js"></script>
+        <script src="https://unpkg.com/ityped@1.0.3"></script>
+        <script>
+            const oneElement = document.querySelector('#info');
+            init(oneElement, { showCursor: false, strings: ['Nice', 'One' ] });
+        </script>
     </head>
     <body>
         <header>
