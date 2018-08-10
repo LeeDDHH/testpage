@@ -1,6 +1,9 @@
 $head-color: #478e46;
 $head-r-color: #e4d72e;
 $btn-opaticy: 0.8;
+$type-img-list:"top", "about", "skills", "contact";
+$type-anime-list:"top", "top2", "about", "about2", "skills", "skills2", "contact", "contact2";
+$legth-anime-list:14.2,12.2,11.2,18.2,27.2,16.2,15.2,10.2;
 
 @mixin header-btn($color, $b-color){
     color:$color;
@@ -75,12 +78,12 @@ header{
 
 }
 
-@each $type in top, about, skills, contact, list{
+@each $type in $type-img-list{
     .#{$type}{
         margin: 0 auto;
 
         .#{$type}-img{
-            padding:500px 0 500px 0;
+            padding:400px 0 400px 0;
             background:url('../img/#{$type}.jpg');
             background-size:cover;  
         }
@@ -130,4 +133,40 @@ header{
             border-radius: 6px;
             font-size: 20px;
         }
+}
+
+.line-typed{
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@each $cname in $type-anime-list{
+    $n: index($type-anime-list, $cname);
+    $width: nth($legth-anime-list, $n);
+
+    .anim-typewriter-#{$cname}{
+        animation: typewriter-#{$cname} 1.3s steps(44) 0.1s 1 normal both,
+                   blinkTextCursor 500ms steps(44) infinite normal;
+    }
+
+    @keyframes typewriter-#{$cname}{
+        from{width: 0;}
+        to{width: #{$width}em;}
+    }
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+
+.temporary-space-h1{
+    padding: 24px 0 24px 0;
 }

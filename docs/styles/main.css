@@ -76,7 +76,7 @@ header .right-menu .menu-item:hover {
 }
 
 .top .top-img {
-  padding: 500px 0 500px 0;
+  padding: 400px 0 400px 0;
   background: url("../img/top.jpg");
   background-size: cover;
 }
@@ -86,7 +86,7 @@ header .right-menu .menu-item:hover {
 }
 
 .about .about-img {
-  padding: 500px 0 500px 0;
+  padding: 400px 0 400px 0;
   background: url("../img/about.jpg");
   background-size: cover;
 }
@@ -96,7 +96,7 @@ header .right-menu .menu-item:hover {
 }
 
 .skills .skills-img {
-  padding: 500px 0 500px 0;
+  padding: 400px 0 400px 0;
   background: url("../img/skills.jpg");
   background-size: cover;
 }
@@ -106,18 +106,8 @@ header .right-menu .menu-item:hover {
 }
 
 .contact .contact-img {
-  padding: 500px 0 500px 0;
+  padding: 400px 0 400px 0;
   background: url("../img/contact.jpg");
-  background-size: cover;
-}
-
-.list {
-  margin: 0 auto;
-}
-
-.list .list-img {
-  padding: 500px 0 500px 0;
-  background: url("../img/list.jpg");
   background-size: cover;
 }
 
@@ -166,4 +156,132 @@ header .right-menu .menu-item:hover {
   height: 40px;
   border-radius: 6px;
   font-size: 20px;
+}
+
+.line-typed {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.anim-typewriter-top {
+  animation: typewriter-top 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-top {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14.2em;
+  }
+}
+
+.anim-typewriter-top2 {
+  animation: typewriter-top2 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-top2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12.2em;
+  }
+}
+
+.anim-typewriter-about {
+  animation: typewriter-about 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-about {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11.2em;
+  }
+}
+
+.anim-typewriter-about2 {
+  animation: typewriter-about2 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-about2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18.2em;
+  }
+}
+
+.anim-typewriter-skills {
+  animation: typewriter-skills 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-skills {
+  from {
+    width: 0;
+  }
+  to {
+    width: 27.2em;
+  }
+}
+
+.anim-typewriter-skills2 {
+  animation: typewriter-skills2 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-skills2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16.2em;
+  }
+}
+
+.anim-typewriter-contact {
+  animation: typewriter-contact 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-contact {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15.2em;
+  }
+}
+
+.anim-typewriter-contact2 {
+  animation: typewriter-contact2 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-contact2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10.2em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.temporary-space-h1 {
+  padding: 24px 0 24px 0;
 }
