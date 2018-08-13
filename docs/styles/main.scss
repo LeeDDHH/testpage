@@ -91,7 +91,7 @@ header{
 }
 
 .container{
-    color:white;
+    color:aliceblue;
     .content{
         margin:0 auto;
         padding: 0 0 0 50px;
@@ -99,34 +99,39 @@ header{
 }
 
 .form-like{
-    background-color: antiquewhite;
-    border: solid 4px #ffd69e;
+    background-color: $head-color;
+    border: solid 4px $head-color;
     width: 400px;
     border-radius: 10px;
     padding: 7px;
     margin: 27px 0 0 0;
-    color: dimgrey;
+    color: aliceblue;
     text-align: center;
 
     p{
         margin:8px 0 8px 0;
     }
+        .text-space{
+            padding: 0 2px 0 2px;
+        }
         .text-input{
             height: 21px;
             border: none;
-            background-color: #ffe7b1;
+            background-color: $head-r-color;
+            color:$head-color;
         }
 
         .textarea-input{
             height: 90px;
             width: 360px;
             border: none;
-            background-color: #ffe7b1;
+            background-color: $head-r-color;
+            color: $head-color;
         }
 
         .send{
-            background-color: #478e46;
-            color: #e4d72e;
+            background-color: $head-r-color;
+            color: $head-color;
             border: none;
             width: 95%;
             height: 40px;

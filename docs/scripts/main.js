@@ -21,6 +21,11 @@ let message = {
 }
 
 window.onload = function() {
+  let d_body = document.documentElement;
+  if(d_body.scrollTop !== 0){
+    this.location='index.html';
+  }
+  
   //form-like
     var address, subject, body;
     var sendmail = document.getElementById('send');
@@ -78,7 +83,10 @@ function myFunction() {
     if(message[key][1] !== 0) continue;
     
     if (document.body.scrollTop > m_pos[key] || document.documentElement.scrollTop > m_pos[key]) {
-      
+
+      let blank = document.querySelector(".blank");
+      blank.parentNode.removeChild(blank);
+
       let typeName = 'anim-typewriter-' + key;
       let key_message = document.getElementById(key);
       key_message.classList.add('line-typed',typeName);

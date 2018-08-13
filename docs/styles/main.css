@@ -112,7 +112,7 @@ header .right-menu .menu-item:hover {
 }
 
 .container {
-  color: white;
+  color: aliceblue;
 }
 
 .container .content {
@@ -121,13 +121,13 @@ header .right-menu .menu-item:hover {
 }
 
 .form-like {
-  background-color: antiquewhite;
-  border: solid 4px #ffd69e;
+  background-color: #478e46;
+  border: solid 4px #478e46;
   width: 400px;
   border-radius: 10px;
   padding: 7px;
   margin: 27px 0 0 0;
-  color: dimgrey;
+  color: aliceblue;
   text-align: center;
 }
 
@@ -135,22 +135,28 @@ header .right-menu .menu-item:hover {
   margin: 8px 0 8px 0;
 }
 
+.form-like .text-space {
+  padding: 0 2px 0 2px;
+}
+
 .form-like .text-input {
   height: 21px;
   border: none;
-  background-color: #ffe7b1;
+  background-color: #e4d72e;
+  color: #478e46;
 }
 
 .form-like .textarea-input {
   height: 90px;
   width: 360px;
   border: none;
-  background-color: #ffe7b1;
+  background-color: #e4d72e;
+  color: #478e46;
 }
 
 .form-like .send {
-  background-color: #478e46;
-  color: #e4d72e;
+  background-color: #e4d72e;
+  color: #478e46;
   border: none;
   width: 95%;
   height: 40px;
