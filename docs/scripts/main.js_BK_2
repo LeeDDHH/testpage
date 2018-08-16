@@ -2,12 +2,8 @@ let m_pos = {
   top:"",
   top2:"",
   about:"",
-  about2:"",
   skills:"",
-  skills2:"",
-  skills3:"",
-  contact:"",
-  contact2:""
+  contact:""
 }
 
 let message = {
@@ -15,19 +11,13 @@ let message = {
   top2:["それはものづくりの第一歩",0],
   about:["一人で考えるのは難しい",0],
   about2:["だけど一緒に考える人がいると楽になる",0],
-  skills:["プログラミングのスキルは学んだ",0],
-  skills2:["だけどやりたいことがまだわからない…",0],
-  skills3:["その悩み、話して整理してみませんか？",0],
+  skills:["プログラミングのスキル、やりたいことがまだわからない…",0],
+  skills2:["誰かに話して整理してみませんか？",0],
   contact:["まずは会って話してみませんか？",0],
   contact2:["お気軽に連絡ください",0]
 }
 
 window.onload = function() {
-  let d_body = document.documentElement;
-  if(d_body.scrollTop !== 0){
-    this.location='index.html';
-  }
-  
   //form-like
     var address, subject, body;
     var sendmail = document.getElementById('send');
@@ -56,7 +46,8 @@ window.onload = function() {
     }
     //form-like end
 
-    let ops_ctrl = 2;
+    //scroll
+    //scroll end
 
     for(key in m_pos){
       // console.log(key);
@@ -64,43 +55,51 @@ window.onload = function() {
       let messageElement = document.getElementById(key);
       //要素の絶対座標を代入
       let messageTopPosition = messageElement.getBoundingClientRect().top;
-
-      messageElement.innerHTML = message[key][0];
-
-      messageElement.style.display = "none";
       //messageのkeyに代入
-      let id_num = key.substr(-1);
-      m_pos[key]= isNaN(id_num) == false ? messageTopPosition - 300 + (30 * id_num) : messageTopPosition - 300;
-      console.log(key);
-      console.log(m_pos[key]);
-      // m_pos[key]= ops_ctrl % 2 == 1 ? messageTopPosition - 300 : messageTopPosition - 360;
-      
-      ops_ctrl++
-
+      m_pos[key]=messageTopPosition - 200;
+      // console.log(m_pos[key]);
     }
 
 }
 
+// var el = document.querySelector();
+// console.log();
+
 window.onscroll = function() {myFunction()};
 
+var i = 0;
+// var txt = 'そう思いませんか？'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
 function myFunction() {
-  for(key in m_pos){
-
-    if(message[key][1] !== 0) continue;
-    
-    if (document.body.scrollTop > m_pos[key] || document.documentElement.scrollTop > m_pos[key]) {
-
-      let blank = document.querySelector(".blank");
-      blank.parentNode.removeChild(blank);
-
-      let typeName = 'anim-typewriter-' + key;
-      let key_message = document.getElementById(key);
-      key_message.classList.add('line-typed',typeName);
-      key_message.style.display = "";
-      message[key][1] = 1;
-
+  let top_div = document.getElementById('top');
+  console.log(top_div);
+  // for(key in m_pos){
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    // if (document.body.scrollTop > m_pos[key] || document.documentElement.scrollTop > m_pos[key]) {
+      // console.log(message[key][0]);
+      // console.log(message[key][1]);
+      
+      if (message["top"][1] < message["top"][0].length) {
+        document.getElementById("top").innerHTML += message["top"][0].charAt(message["top"][1]);
+        message["top"][1]++;
+        setTimeout(typeWriter("top"), speed);
+      }
     }
-  
-  }
+  // }
     
+}
+
+// var i = 0;
+// var txt = 'そう思いませんか？'; /* The text */
+// var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter(key) {
+  if(!key) return;
+  console.log(message[key]);
+  if (message[key][1] < message[key][0].length) {
+    document.getElementById(key).innerHTML += message[key][0].charAt(message[key][1]);
+    message[key][1]++;
+    setTimeout(typeWriter, speed);
+  }
 }

@@ -43,11 +43,17 @@ header .left-logo:hover {
   opacity: 1;
 }
 
+header .left-logo:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
 header .left-logo:hover {
   opacity: 1;
 }
 
-header .left-logo:hover .piyo {
+header .left-logo:active .piyo {
   display: block;
 }
 
@@ -62,6 +68,7 @@ header .right-menu .menu-item {
   border-radius: 10px;
   margin: 0 0 0 22px;
   padding: 4px 21px;
+  box-shadow: 0 5px #afa417;
   color: #478e46;
   background-color: #e4d72e;
   opacity: 0.8;
@@ -69,6 +76,12 @@ header .right-menu .menu-item {
 
 header .right-menu .menu-item:hover {
   opacity: 1;
+}
+
+header .right-menu .menu-item:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
 }
 
 .top {
@@ -122,7 +135,7 @@ header .right-menu .menu-item:hover {
 
 .form-like {
   background-color: #478e46;
-  border: solid 4px #478e46;
+  border: solid 4px #366c35;
   width: 400px;
   border-radius: 10px;
   padding: 7px;
@@ -132,7 +145,7 @@ header .right-menu .menu-item:hover {
 }
 
 .form-like p {
-  margin: 8px 0 8px 0;
+  margin: 0 0 8px 0;
 }
 
 .form-like .text-space {
@@ -155,13 +168,25 @@ header .right-menu .menu-item:hover {
 }
 
 .form-like .send {
-  background-color: #e4d72e;
   color: #478e46;
+  background-color: #e4d72e;
+  opacity: 0.8;
+  box-shadow: 0 5px #afa417;
   border: none;
   width: 95%;
   height: 40px;
   border-radius: 6px;
   font-size: 20px;
+}
+
+.form-like .send:hover {
+  opacity: 1;
+}
+
+.form-like .send:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
 }
 
 .line-typed {
@@ -236,7 +261,7 @@ header .right-menu .menu-item:hover {
     width: 0;
   }
   to {
-    width: 27.2em;
+    width: 15.2em;
   }
 }
 
@@ -249,7 +274,20 @@ header .right-menu .menu-item:hover {
     width: 0;
   }
   to {
-    width: 16.2em;
+    width: 18.2em;
+  }
+}
+
+.anim-typewriter-skills3 {
+  animation: typewriter-skills3 1.3s steps(44) 0.1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter-skills3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18.2em;
   }
 }
 
@@ -290,4 +328,23 @@ header .right-menu .menu-item:hover {
 
 .temporary-space-h1 {
   padding: 24px 0 24px 0;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1.8s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

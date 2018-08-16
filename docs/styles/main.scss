@@ -2,8 +2,8 @@ $head-color: #478e46;
 $head-r-color: #e4d72e;
 $btn-opaticy: 0.8;
 $type-img-list:"top", "about", "skills", "contact";
-$type-anime-list:"top", "top2", "about", "about2", "skills", "skills2", "contact", "contact2";
-$legth-anime-list:14.2,12.2,11.2,18.2,27.2,16.2,15.2,10.2;
+$type-anime-list:"top", "top2", "about", "about2", "skills", "skills2", "skills3", "contact", "contact2";
+$legth-anime-list:14.2,12.2,11.2,18.2,15.2,18.2,18.2,15.2,10.2;
 
 @mixin header-btn($color, $b-color){
     color:$color;
@@ -11,7 +11,12 @@ $legth-anime-list:14.2,12.2,11.2,18.2,27.2,16.2,15.2,10.2;
     opacity:$btn-opaticy;
         &:hover {
             opacity:1;
-    }
+        }
+        &:active {
+            position: relative;
+            top: 5px;
+            box-shadow: none;
+        }
 }
 
 * {
@@ -55,10 +60,12 @@ header{
 
         @include header-btn($head-r-color,null);
         &:hover{
+            opacity:1;
+        }
+        &:active{
             .piyo{
                 display:block;
             }
-            opacity:1;
         }
     }
 
@@ -72,6 +79,7 @@ header{
             border-radius: 10px;
             margin: 0 0 0 22px;
             padding: 4px 21px;
+            box-shadow: 0 5px darken($head-r-color, 15%);
             @include header-btn($head-color,$head-r-color);
         }
     }
@@ -85,7 +93,7 @@ header{
         .#{$type}-img{
             padding:400px 0 400px 0;
             background:url('../img/#{$type}.jpg');
-            background-size:cover;  
+            background-size:cover;
         }
     }
 }
@@ -100,7 +108,7 @@ header{
 
 .form-like{
     background-color: $head-color;
-    border: solid 4px $head-color;
+    border: solid 4px darken($head-color,10%);
     width: 400px;
     border-radius: 10px;
     padding: 7px;
@@ -109,7 +117,7 @@ header{
     text-align: center;
 
     p{
-        margin:8px 0 8px 0;
+        margin:0 0 8px 0;
     }
         .text-space{
             padding: 0 2px 0 2px;
@@ -130,8 +138,8 @@ header{
         }
 
         .send{
-            background-color: $head-r-color;
-            color: $head-color;
+            @include header-btn($head-color,$head-r-color);
+            box-shadow: 0 5px darken($head-r-color, 15%);
             border: none;
             width: 95%;
             height: 40px;
@@ -174,4 +182,23 @@ header{
 
 .temporary-space-h1{
     padding: 24px 0 24px 0;
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1.8s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
